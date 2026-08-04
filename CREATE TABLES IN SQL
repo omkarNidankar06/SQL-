@@ -1,0 +1,14 @@
+DROP TABLE student;
+
+CREATE TABLE student (
+    student_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT,
+    gender VARCHAR(10),
+    department VARCHAR(50),
+    year_of_study INT,
+    email VARCHAR(100),
+    phone VARCHAR(15)
+);
+
+SELECT * FROM student;
