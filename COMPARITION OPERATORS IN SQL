@@ -1,0 +1,45 @@
+DROP TABLE IF EXISTS employee3;
+
+CREATE TABLE employee3 (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(20) NOT NULL,
+    last_name VARCHAR(20) NOT NULL,
+    department VARCHAR(20),
+    salary NUMERIC(10,2),
+    joining_date DATE,
+    age INT
+);
+
+INSERT INTO employee3
+(employee_id, first_name, last_name, department, salary, joining_date, age)
+VALUES
+(101, 'Omkar', 'Nidankar', 'IT', 45000.00, '2024-06-15', 21),
+(102, 'Rahul', 'Sharma', 'HR', 38000.00, '2023-08-20', 24),
+(103, 'Priya', 'Reddy', 'Finance', 52000.00, '2022-03-10', 26),
+(104, 'Arjun', 'Kumar', 'IT', 60000.00, '2021-11-05', 28),
+(105, 'Sneha', 'Patel', 'Marketing', 42000.00, '2024-01-18', 23),
+(106, 'Vijay', 'Rao', 'Sales', 35000.00, '2023-05-12', 25),
+(107, 'Anjali', 'Singh', 'IT', 58000.00, '2022-09-25', 27),
+(108, 'Kiran', 'Verma', 'HR', 40000.00, '2024-02-14', 22),
+(109, 'Neha', 'Mehta', 'Finance', 55000.00, '2021-07-30', 29),
+(110, 'Rohit', 'Das', 'Sales', 37000.00, '2023-12-01', 24);
+
+SELECT * FROM employee3;
+ARITHMATIC
+SELECT first_name, salary,(salary*0.10) AS Bonus
+FROM employee3;
+
+--comparition opertor--
+SELECT * FROM employee3
+WHERE age=29;
+
+--matches all expcept 29
+SELECT * FROM employee3
+WHERE age!=29;
+
+--salary grether than 50000
+SELECT * FROM employee3
+WHERE salary>50000
+
+
+
