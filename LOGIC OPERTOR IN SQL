@@ -1,0 +1,13 @@
+SELECT * FROM employee3
+
+---USING AND OPERATORS--
+SELECT * FROM employee3
+WHERE age>=23 AND salary>= 38000;
+
+--USING OR OPERTORS--
+SELECT * FROM employee3
+WHERE age>=23 OR salary>= 38000
+
+---USING NOT OPERATORS--
+SELECT * FROM employee3
+WHERE NOT (department='HR');
