@@ -1,0 +1,26 @@
+SELECT * FROM employee3
+
+--find empoyee where the email column in sql (if application)--
+
+SELECT first_name, last_name, salary
+FROM employee3
+WHERE salary IS NULL;
+
+--list employee sorted by salary in DESCENDING order,--
+
+SELECT first_name, last_name, salary
+FROM employee3
+ORDER BY salary DESC;
+
+--Retrive the top 5 highest-paid employee.
+SELECT first_name, last_name, salary
+FROM employee3
+ORDER BY salary DESC
+LIMIT 5;
+
+
+--Retrive a list of unique departments
+SELECT DISTINCT  department
+FROM employee3;
+
+
