@@ -1,0 +1,59 @@
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(100) NOT NULL,
+    category VARCHAR(50),
+    price DECIMAL(10,2),
+    quantity INT,
+    added_date DATE,
+    discount DECIMAL(5,2)
+);
+
+SELECT * FROM products;
+
+INSERT INTO products
+(product_id, product_name, category, price, quantity, added_date, discount)
+VALUES
+(1, 'Laptop', 'Electronics', 55000.00, 10, '2026-09-01', 10.00),
+(2, 'Smartphone', 'Electronics', 25000.00, 20, '2026-09-02', 5.00),
+(3, 'Headphones', 'Accessories', 2000.00, 50, '2026-09-03', 15.00),
+(4, 'Keyboard', 'Accessories', 1200.00, 30, '2026-09-04', 8.00),
+(5, 'Office Chair', 'Furniture', 8500.00, 15, '2026-09-05', 12.00),
+(6, 'Monitor', 'Electronics', 18000.00, 12, '2026-09-06', 7.00),
+(7, 'Mouse', 'Accessories', 800.00, 40, '2026-09-07', 10.00),
+(8, 'Table', 'Furniture', 6000.00, 18, '2026-09-08', 5.00),
+(9, 'Printer', 'Electronics', 12000.00, 8, '2026-09-08', 10.00),
+(10, 'USB Cable', 'Accessories', 500.00, 60, '2026-09-08', 20.00);
+
+SELECT * FROM products;
+
+--total quatity Availble of all products
+SELECT SUM( quantity) AS total_quantity
+FROM products;
+
+SELECT SUM( quantity) AS  quantity_of_ele
+FROM products
+WHERE category='Electronics' AND price > 30000;
+
+---total numbers of product 
+
+SELECT COUNT(*) AS total_products
+FROM products;
+
+--count with condition
+SELECT COUNT(*) AS total_products
+FROM products 
+WHERE product_name LIKE '%phone';
+
+--AVAREGE PRICE OF PRODUCTS--
+SELECT AVG(price) AS averge_price
+FROM products
+WHERE category='Accessories' OR added_date > '2026-09-08';
+
+SELECT * FROM products;
+
+---MAXIMUM PRICE --
+SELECT MAX(price) AS MAX_PRICE,
+       MIN(PRICE) AS MIN_PRICE
+FROM products;
+
+SELECT * FROM products;
