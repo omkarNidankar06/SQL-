@@ -1,0 +1,25 @@
+SELECT * FROM  employee3;
+
+CREATE TABLE Departments (
+	department_id INT PRIMARY KEY,
+	department_name VARCHAR(50)
+);
+
+
+SELECT * FROM Departments
+
+INSERT INTO Departments(department_id,department_name)
+VALUES
+(101,'Sales'),
+(102, 'Marketing'),
+(103, 'IT'),
+(104, 'HR');
+
+
+SELECT e.employee_id, e.first_name, e.last_name,
+		d.department_id, d.department_name
+FROM employee3 e
+INNER JOIN
+Departments d
+ON e.department_id=d.department_id;
+
